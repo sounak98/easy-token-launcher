@@ -43,6 +43,8 @@ class TokenLaunchForm extends Component {
     if (window.ethereum) {
       if (window.ethereum.selectedAddress) {
         this.setState({ user: window.ethereum.selectedAddress });
+      } else {
+        alert("Please login and refresh the page");
       }
     } else {
       console.error("Install/Update MetaMask");
